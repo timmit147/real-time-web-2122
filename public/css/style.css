@@ -60,7 +60,7 @@ body {
     color: gold;
 }
 
-.leaderboard {
+#leaderboard {
     position: fixed;
     left: 1em;
     top: 6em;

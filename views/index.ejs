@@ -4,6 +4,8 @@
 <head>
     <link rel="stylesheet" href="css/style.css">
 </head>
+<script src="/socket.io/socket.io.js"></script>
+
   
 <body>
     <div class="background"></div>
@@ -16,9 +18,8 @@
         <span class="score_val"></span>
     </div>
 
-    <div class="leaderboard">
-        <p>User</p> <p>score</p>
-    </div>
+    <ul id="leaderboard">
+    </ul>
 
     <script src="js/script.js"></script>
 </body>

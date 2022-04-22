@@ -1,3 +1,41 @@
+// Socket 
+
+let socket = io()
+let input = document.querySelector('input')
+
+
+// document.addEventListener("keyup", function(event) {
+//     if (event.keyCode === 81)  {
+//     socket.emit('message', score_val.innerHTML);
+//   }
+// });
+
+
+socket.on('message', message => {
+  var ul = document.getElementById("leaderboard");
+  ul.innerHTML = "";
+  for (let i = 0; i < Object.keys(message).length; i++) {
+    var li = document.createElement("li");
+    li.appendChild(document.createTextNode(Object.keys(message)[i]+":"+message[Object.keys(message)[i]]));
+    ul.appendChild(li);
+  }
+
+
+})
+
+
+
+
+
+
+
+
+
+
+
+// changed code
+
+
 // Background scrolling speed
 let move_speed = 3;
     
@@ -88,6 +126,7 @@ function play() {
             element.increase_score == '1'
           ) {
             score_val.innerHTML = +score_val.innerHTML + 1;
+            socket.emit('message', score_val.innerHTML);
           }
           element.style.left = 
             pipe_sprite_props.left - move_speed + 'px';
@@ -161,3 +200,8 @@ function play() {
   }
   requestAnimationFrame(create_pipe);
 }
+
+
+
+
+

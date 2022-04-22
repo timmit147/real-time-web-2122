@@ -12,3 +12,5 @@ Voor dit project heb ik socket.io toegevoegd op een bestaande flappy bird game.
 ## Hoeveel data verstuurt de client?
 Wanneer iemand dood gaat stuurt de client de data naar alle gebruikers. Met 3 gebruikers met een score van 3 caracters is dit 3x3x8 = 72 bites
 
+## Bronnen
+https://www.geeksforgeeks.org/flappy-bird-game-in-javascript/

@@ -43,7 +43,7 @@ Een game waarbij je naar verschillenden bestemmingen moet vliegen op basis van d
 https://aviationstack.com/
 
 ## Gekozen API
-Ik heb gekozen om de yahoo-weather-API te gebruiken om live data te tonen omdat je dit ook echt live kan zien wanneer je naar buiten kijkt. 
+Ik heb gekozen om de yahoo-weather-API te gebruiken om live data te tonen omdat je dit ook echt live kan zien wanneer je naar buiten kijkt. Na het testen van de API kwam ik er achter dat de API niet goed was daarom gebruik ik nu deze API https://rapidapi.com/community/api/open-weather-map.
 
 ## Schetsen
 

@@ -5,9 +5,9 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <script src="/socket.io/socket.io.js"></script>
-
   
 <body>
+    <div id="filter"></div>
     <div class="background"></div>
     <img class="bird" src="images/flappy.png" alt="bird-img">
     <div class="message">
@@ -22,6 +22,39 @@
     </ul>
 
     <script src="js/script.js"></script>
+    <script>
+        // Storm
+        if(<%- weather %> == 2){
+            document.querySelector(".background").style.backgroundColor = "#07053D";
+            document.querySelector("#filter").classList.add("storm");
+        }
+        // Rain
+        if(<%- weather %> == 5){
+            document.querySelector(".background").style.backgroundColor = "#06028A";
+            document.querySelector("#filter").classList.add("rain");
+        }
+        // Snow
+        if(<%- weather %> == 6){
+            document.querySelector(".background").style.backgroundColor = "#A0E7FF";
+            document.querySelector("#filter").classList.add("snow");
+        }
+        // Fog
+        if(<%- weather %> == 7){
+            document.querySelector(".background").style.backgroundColor = "#6B6B6B";
+            document.querySelector("#filter").classList.add("fog");
+        }   
+        // Cloudy
+        if(<%- weather %> == 8){
+            document.querySelector(".background").style.backgroundColor = "#1A83C9";
+            document.querySelector("#filter").classList.add("cloud");
+        }
+        // Clear
+        if(<%- weather %> == 800){
+            document.querySelector(".background").style.backgroundColor = "#EFE226";
+            document.querySelector("#filter").classList.add("sun");
+        }
+
+    </script>
 </body>
   
 </html>

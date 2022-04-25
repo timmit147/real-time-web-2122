@@ -27,10 +27,21 @@ async function fetchJson(url) {
 app.get('/', (req, res) => {
 
   fetchJson('https://api.openweathermap.org/data/2.5/weather?lat=52.36252905998706&lon=4.9114791923019805&appid=8654e1d765a1532e35c17c744e59edd2').then(function (jsonData) {
-  console.log(jsonData);  
+  // console.log(jsonData["weather"][0]["id"]);  
+  number = jsonData["weather"][0]["id"];
+  let numberFirst;
+  if(number != 800){
+    numberFirst = String(number)[0]
+  }
+  else{
+    numberFirst = number    
+  }
+console.log(numberFirst);
+    res.render("index",{
+      weather: numberFirst
+    });
   });
 
-      res.render("index");
 })
 
 
@@ -43,14 +54,14 @@ http.listen(port, () => {
 var users = {};
 
 io.on('connection', (socket) => {
-  console.log('user: ' +socket.id+'connected' )
+  // console.log('user: ' +socket.id+'connected' )
   socket.on('tube-score', (tubescore) => {
     users[socket.id]=tubescore;
     io.emit('tube-score', users)
-  })
+})
 
   socket.on('disconnect', () => {
-    console.log('user: ' +socket.id+'connected' );
+    // console.log('user: ' +socket.id+'connected' );
     delete users[socket.id];
   })
 })

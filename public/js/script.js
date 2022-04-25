@@ -6,12 +6,12 @@ let input = document.querySelector('input')
 
 // document.addEventListener("keyup", function(event) {
 //     if (event.keyCode === 81)  {
-//     socket.emit('message', score_val.innerHTML);
+//     socket.emit('tube-score', score_val.innerHTML);
 //   }
 // });
 
 
-socket.on('message', message => {
+socket.on('tube-score', message => {
   var ul = document.getElementById("leaderboard");
   ul.innerHTML = "";
   for (let i = 0; i < Object.keys(message).length; i++) {
@@ -68,6 +68,8 @@ document.addEventListener('keydown', (e) => {
   // Start the game if space key is pressed
   if (e.key == ' ' &&
       game_state != 'Play') {
+
+        socket.emit('tube-score', score_val.innerHTML);
     document.querySelectorAll('.pipe_sprite')
               .forEach((e) => {
       e.remove();
@@ -113,7 +115,7 @@ function play() {
           // Change game state and end the game
           // if collision occurs
           game_state = 'End';
-          message.innerHTML = 'Press Enter To Restart';
+          message.innerHTML = 'Press Space To Restart';
           message.style.left = '28vw';
           return;
         } else {
@@ -126,7 +128,7 @@ function play() {
             element.increase_score == '1'
           ) {
             score_val.innerHTML = +score_val.innerHTML + 1;
-            socket.emit('message', score_val.innerHTML);
+            socket.emit('tube-score', score_val.innerHTML);
           }
           element.style.left = 
             pipe_sprite_props.left - move_speed + 'px';
@@ -154,10 +156,11 @@ function play() {
     if (bird_props.top <= 0 ||
         bird_props.bottom >= background.bottom) {
       game_state = 'End';
-      message.innerHTML = 'Press Enter To Restart';
+      message.innerHTML = 'Press Space To Restart';
       message.style.left = '28vw';
       return;
     }
+    
     bird.style.top = bird_props.top + bird_dy + 'px';
     bird_props = bird.getBoundingClientRect();
     requestAnimationFrame(apply_gravity);

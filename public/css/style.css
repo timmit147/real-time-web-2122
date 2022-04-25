@@ -46,7 +46,8 @@ h1 {
     font-weight: 100;
     color: black;
     bottom: 12vh;
-    left: 20vw;
+    left: 5vw;
+    width: 90vw;
     text-align: center;
     z-index: 1000;
 }
@@ -69,13 +70,14 @@ h1 {
 #leaderboard {
     position: fixed;
     left: 1em;
-    top: 6em;
+    top: 1em;
+    padding: 10px;
 }
 
 .cloud {
     position: fixed;
-    top: 0;
-    left: 0;
+    top: 20px;
+    left: 20px;
     width: inherit;
     height: 20vw;
     background-image: url(../images/cloud.png);

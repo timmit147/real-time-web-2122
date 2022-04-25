@@ -1,14 +1,10 @@
+username = prompt("username");
+
+
 // Socket 
 
 let socket = io()
 let input = document.querySelector('input')
-
-
-// document.addEventListener("keyup", function(event) {
-//     if (event.keyCode === 81)  {
-//     socket.emit('tube-score', score_val.innerHTML);
-//   }
-// });
 
 
 socket.on('tube-score', message => {
@@ -16,7 +12,7 @@ socket.on('tube-score', message => {
   ul.innerHTML = "";
   for (let i = 0; i < Object.keys(message).length; i++) {
     var li = document.createElement("li");
-    li.appendChild(document.createTextNode(Object.keys(message)[i]+":"+message[Object.keys(message)[i]]));
+    li.appendChild(document.createTextNode(message[Object.keys(message)[i]].username+":"+message[Object.keys(message)[i]].score));
     ul.appendChild(li);
   }
 
@@ -52,12 +48,9 @@ let background =
             .getBoundingClientRect();
     
 // Getting reference to the score element
-let score_val =
-    document.querySelector('.score_val');
+let score = 0;
 let message =
     document.querySelector('.message');
-let score_title =
-    document.querySelector('.score_title');
     
 // Setting initial game state to start
 let game_state = 'Start';
@@ -69,7 +62,8 @@ document.addEventListener('keydown', (e) => {
   if (e.key == ' ' &&
       game_state != 'Play') {
 
-        socket.emit('tube-score', score_val.innerHTML);
+        socket.emit('tube-score', score);
+        socket.emit('username', username);
     document.querySelectorAll('.pipe_sprite')
               .forEach((e) => {
       e.remove();
@@ -77,8 +71,7 @@ document.addEventListener('keydown', (e) => {
     bird.style.top = '40vh';
     game_state = 'Play';
     message.innerHTML = '';
-    score_title.innerHTML = 'Score : ';
-    score_val.innerHTML = '0';
+    score = '0';
     play();
   }
 });
@@ -116,7 +109,6 @@ function play() {
           // if collision occurs
           game_state = 'End';
           message.innerHTML = 'Press Space To Restart';
-          message.style.left = '28vw';
           return;
         } else {
           // Increase the score if player
@@ -127,8 +119,8 @@ function play() {
             move_speed >= bird_props.left &&
             element.increase_score == '1'
           ) {
-            score_val.innerHTML = +score_val.innerHTML + 1;
-            socket.emit('tube-score', score_val.innerHTML);
+            score = +score + 1;
+            socket.emit('tube-score', score);
           }
           element.style.left = 
             pipe_sprite_props.left - move_speed + 'px';
@@ -157,7 +149,6 @@ function play() {
         bird_props.bottom >= background.bottom) {
       game_state = 'End';
       message.innerHTML = 'Press Space To Restart';
-      message.style.left = '28vw';
       return;
     }
     

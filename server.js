@@ -53,12 +53,20 @@ http.listen(port, () => {
 
 var users = {};
 
+
 io.on('connection', (socket) => {
   // console.log('user: ' +socket.id+'connected' )
+  users[socket.id] = {score:"0",username:"0"};
+
   socket.on('tube-score', (tubescore) => {
-    users[socket.id]=tubescore;
+    users[socket.id].score = tubescore;
     io.emit('tube-score', users)
-})
+  })
+  socket.on('username', (username) => {
+    users[socket.id].username = username;
+    io.emit('username', username)
+  })
+
 
   socket.on('disconnect', () => {
     // console.log('user: ' +socket.id+'connected' );

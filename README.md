@@ -47,6 +47,29 @@ Ik heb gekozen om de yahoo-weather-API te gebruiken om live data te tonen omdat 
 
 ## Schetsen
 
+## API data ophalen
+
+### Weer codes
+
+Ik ga niet alle codes uitvoeren maar alleen de globale codes.
+
+2xx: storm
+5xx: regen
+6xx: sneeuw
+7xx: mist
+800 zonig
+80x: wolken
+
+![Web 1920 – 16](https://user-images.githubusercontent.com/29665951/165083176-b82296b3-39e6-4ec4-aa90-3c1f5e3cc467.png)
+![Web 1920 – 18](https://user-images.githubusercontent.com/29665951/165083183-cb0dcaa6-759e-4ef0-adaa-adf2a3c4d988.png)
+![Web 1920 – 19](https://user-images.githubusercontent.com/29665951/165083184-f808d88e-94ae-4e3f-9cc7-647050a36552.png)
+![Web 1920 – 17](https://user-images.githubusercontent.com/29665951/165083186-2db204de-38ad-4fed-b7cb-d0b1ebaff786.png)
+![Web 1920 – 15](https://user-images.githubusercontent.com/29665951/165083189-c29a0394-8a2d-4837-b154-a2d5e9ab8d2a.png)
+![Web 1920 – 14](https://user-images.githubusercontent.com/29665951/165083190-582ae5db-8c39-4a97-8acf-f52ea4450781.png)
+
+
+https://openweathermap.org/weather-conditions
+
 
 ## Bronnen
 https://www.geeksforgeeks.org/flappy-bird-game-in-javascript/

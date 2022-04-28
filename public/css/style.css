@@ -67,10 +67,18 @@ h1 {
     color: gold;
 }
 
+.currentUser{
+    position: fixed;
+    left: 0.1em;
+    top: 1em;
+    padding: 10px;
+    font-weight: bold;
+}
+
 #leaderboard {
     position: fixed;
     left: 1em;
-    top: 1em;
+    top: 3em;
     padding: 10px;
 }
 

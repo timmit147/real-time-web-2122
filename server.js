@@ -36,7 +36,7 @@ app.get('/', (req, res) => {
   else{
     numberFirst = number    
   }
-console.log(numberFirst);
+// console.log(numberFirst);
     res.render("index",{
       weather: numberFirst
     });
@@ -51,12 +51,39 @@ http.listen(port, () => {
 
 
 
-var users = {};
+var users = {
+};
+
+// function ranking(){
+//   let sortable = [];
+// for (var item in users) {
+//   console.log(users[item].score);
+//     sortable.push([item, users[item].score]);
+// }
+
+// sortable.sort(function(a, b) {
+//     return a[1].score - b[1].score;
+// });
+
+// https://www.tutorialspoint.com/javascript-sort-object-of-objects
+const sortByPosition = obj => {
+  const order = [];
+  var res = {};
+  Object.keys(obj).forEach(key => {
+     return order[obj[key]['score'] - 1] = key;
+  });
+  order.forEach(key => {
+     res[key] = obj[key];
+  });
+
+  return res;
+}
 
 
 io.on('connection', (socket) => {
+    users = sortByPosition(users);
   // console.log('user: ' +socket.id+'connected' )
-  users[socket.id] = {score:"0",username:"0"};
+  users[socket.id] = {score:0,username:"0"};
 
   socket.on('tube-score', (tubescore) => {
     users[socket.id].score = tubescore;
@@ -70,7 +97,7 @@ io.on('connection', (socket) => {
 
   socket.on('disconnect', () => {
     // console.log('user: ' +socket.id+'connected' );
-    delete users[socket.id];
+    // delete users[socket.id];
   })
 })
 

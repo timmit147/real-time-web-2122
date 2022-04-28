@@ -6,14 +6,21 @@ username = prompt("username");
 let socket = io()
 let input = document.querySelector('input')
 
-
 socket.on('tube-score', message => {
   var ul = document.getElementById("leaderboard");
   ul.innerHTML = "";
-  for (let i = 0; i < Object.keys(message).length; i++) {
+  // Object.keys(message).reverse()
+  // console.log(message)
+
+  for (var i = Object.keys(message).length - 1; i >= 0; i-- ) {
+    if(message[Object.keys(message)[i]].username == username){
+      document.querySelector(".currentUser").innerHTML = message[Object.keys(message)[i]].username+":"+message[Object.keys(message)[i]].score;
+    }
+    else{
     var li = document.createElement("li");
     li.appendChild(document.createTextNode(message[Object.keys(message)[i]].username+":"+message[Object.keys(message)[i]].score));
     ul.appendChild(li);
+  }
   }
 
 
@@ -62,6 +69,8 @@ document.addEventListener('keydown', (e) => {
   if (e.key == ' ' &&
       game_state != 'Play') {
 
+        socket.emit('tube-score', score);
+        socket.emit('username', username);
         socket.emit('tube-score', score);
         socket.emit('username', username);
     document.querySelectorAll('.pipe_sprite')

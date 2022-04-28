@@ -21,8 +21,8 @@ h1 {
 }
   
 .bird {
-    height: 100px;
-    width: 160px;
+    height: initial;
+    width: 10vh;
     position: fixed;
     top: 40vh;
     left: 30vw;
@@ -34,7 +34,7 @@ h1 {
     top: 40vh;
     left: 100vw;
     height: 70vh;
-    width: 6vw;
+    width: 50px;
     background-color: green;
 }
   
@@ -50,6 +50,7 @@ h1 {
     width: 90vw;
     text-align: center;
     z-index: 1000;
+    font-size: 2.5em;
 }
   
 .score {
@@ -73,6 +74,8 @@ h1 {
     top: 1em;
     padding: 10px;
     font-weight: bold;
+    font-size: 3vh;
+    z-index: 9999;
 }
 
 #leaderboard {
@@ -80,6 +83,8 @@ h1 {
     left: 1em;
     top: 3em;
     padding: 10px;
+    font-size: 3vh;
+    z-index: 9999;
 }
 
 .cloud {

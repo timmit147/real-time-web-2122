@@ -35,7 +35,6 @@ socket.on('tube-score', message => {
 
 
 
-
 // changed code
 
 
@@ -62,9 +61,27 @@ let message =
 // Setting initial game state to start
 let game_state = 'Start';
     
+document.querySelector("body").onclick= function(event) {
+  if( game_state != 'Play'){
+    socket.emit('tube-score', score);
+        socket.emit('username', username);
+        socket.emit('tube-score', score);
+        socket.emit('username', username);
+    document.querySelectorAll('.pipe_sprite')
+              .forEach((e) => {
+      e.remove();
+    });
+    bird.style.top = '40vh';
+    game_state = 'Play';
+    message.innerHTML = '';
+    score = '0';
+    play();
+  }
+};
+
 // Add an eventlistener for key presses
 document.addEventListener('keydown', (e) => {
-    
+
   // Start the game if space key is pressed
   if (e.key == ' ' &&
       game_state != 'Play') {
@@ -84,6 +101,7 @@ document.addEventListener('keydown', (e) => {
     play();
   }
 });
+
 function play() {
   function move() {
       
@@ -155,6 +173,16 @@ function play() {
         bird_dy = -7.6;
       }
     });
+    document.onclick= function(event) {
+      if (game_state == 'Play'){
+        console.log("test");
+        bird_dy = -7.6;
+      }
+    }
+
+    // document.body.on('click touchstart', function () {
+    //   console.log("test");
+    // }
   
 
     
@@ -167,7 +195,7 @@ function play() {
   let pipe_seperation = 0;
     
   // Constant value for the gap between two pipes
-  let pipe_gap = 35;
+  let pipe_gap = 25;
   function create_pipe() {
     if (game_state != 'Play') return;
       
@@ -188,7 +216,7 @@ function play() {
       document.body.appendChild(pipe_sprite_inv);
       let pipe_sprite = document.createElement('div');
       pipe_sprite.className = 'pipe_sprite';
-      pipe_sprite.style.top = pipe_posi + pipe_gap + 'vh';
+      pipe_sprite.style.top = pipe_posi + pipe_gap + '%';
       pipe_sprite.style.left = '100vw';
       pipe_sprite.increase_score = '1';
         

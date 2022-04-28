@@ -90,10 +90,14 @@ function play() {
         
       // Delete the pipes if they have moved out
       // of the screen hence saving memory
+      
       if (pipe_sprite_props.right <= 0) {
         element.remove();
       } else {
         // Collision detection with bird and pipes
+            // Collision detection with bird and
+    // window top and bottom
+  
         if (
           bird_props.left < pipe_sprite_props.left +
           pipe_sprite_props.width &&
@@ -102,13 +106,14 @@ function play() {
           bird_props.top < pipe_sprite_props.top +
           pipe_sprite_props.height &&
           bird_props.top +
-          bird_props.height > pipe_sprite_props.top
+          bird_props.height > pipe_sprite_props.top || bird_props.top < 0 ||  bird_props.bottom > background.bottom
         ) {
             
           // Change game state and end the game
           // if collision occurs
           game_state = 'End';
           message.innerHTML = 'Press Space To Restart';
+          bird.style.top = '40vh';
           return;
         } else {
           // Increase the score if player
@@ -142,15 +147,7 @@ function play() {
       }
     });
   
-    // Collision detection with bird and
-    // window top and bottom
-  
-    if (bird_props.top <= 0 ||
-        bird_props.bottom >= background.bottom) {
-      game_state = 'End';
-      message.innerHTML = 'Press Space To Restart';
-      return;
-    }
+
     
     bird.style.top = bird_props.top + bird_dy + 'px';
     bird_props = bird.getBoundingClientRect();

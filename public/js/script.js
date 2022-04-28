@@ -14,11 +14,11 @@ socket.on('tube-score', message => {
 
   for (var i = Object.keys(message).length - 1; i >= 0; i-- ) {
     if(message[Object.keys(message)[i]].username == username){
-      document.querySelector(".currentUser").innerHTML = message[Object.keys(message)[i]].username+":"+message[Object.keys(message)[i]].score;
+      document.querySelector(".currentUser").innerHTML = message[Object.keys(message)[i]].username+":"+message[Object.keys(message)[i]].score +" ★ " + message[Object.keys(message)[i]].hyscore ;
     }
     else{
     var li = document.createElement("li");
-    li.appendChild(document.createTextNode(message[Object.keys(message)[i]].username+":"+message[Object.keys(message)[i]].score));
+    li.appendChild(document.createTextNode(message[Object.keys(message)[i]].username+":"+message[Object.keys(message)[i]].hyscore));
     ul.appendChild(li);
   }
   }

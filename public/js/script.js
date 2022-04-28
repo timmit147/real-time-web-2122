@@ -196,6 +196,7 @@ function play() {
     
   // Constant value for the gap between two pipes
   let pipe_gap = 25;
+  var level = 0;
   function create_pipe() {
     if (game_state != 'Play') return;
       
@@ -219,9 +220,17 @@ function play() {
       pipe_sprite.style.top = pipe_posi + pipe_gap + 'vh';
       pipe_sprite.style.left = '150vw';
       pipe_sprite.increase_score = '1';
+      if(level > 15){
+        console.log("level2");
+        document.body.classList.add('move');
+      }
+      else{
+        document.body.classList.remove('move');
+      }
         
       // Append the created pipe element in DOM
       document.body.appendChild(pipe_sprite);
+      level = level+1;
     }
     pipe_seperation++;
     requestAnimationFrame(create_pipe);

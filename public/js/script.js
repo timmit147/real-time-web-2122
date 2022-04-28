@@ -210,14 +210,14 @@ function play() {
       let pipe_sprite_inv = document.createElement('div');
       pipe_sprite_inv.className = 'pipe_sprite';
       pipe_sprite_inv.style.top = pipe_posi - 70 + 'vh';
-      pipe_sprite_inv.style.left = '100vw';
+      pipe_sprite_inv.style.left = '150vw';
         
       // Append the created pipe element in DOM
       document.body.appendChild(pipe_sprite_inv);
       let pipe_sprite = document.createElement('div');
       pipe_sprite.className = 'pipe_sprite';
-      pipe_sprite.style.top = pipe_posi + pipe_gap + '%';
-      pipe_sprite.style.left = '100vw';
+      pipe_sprite.style.top = pipe_posi + pipe_gap + 'vh';
+      pipe_sprite.style.left = '150vw';
       pipe_sprite.increase_score = '1';
         
       // Append the created pipe element in DOM

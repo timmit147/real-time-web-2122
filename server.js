@@ -97,6 +97,7 @@ io.on('connection', (socket) => {
     users[socket.id].username = username;
     io.emit('username', username)
   })
+  
   socket.on('y', (y) => {
     users[socket.id].y = y;
     io.emit('y', y)

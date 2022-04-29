@@ -29,7 +29,10 @@ socket.on('tube-score', message => {
 
 socket.on('y', y => {
     document.querySelector(".ghost").style.top = y-50+"px";
+    console.log(username);
+
 })
+
 
 
 

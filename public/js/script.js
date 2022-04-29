@@ -27,6 +27,11 @@ socket.on('tube-score', message => {
 })
 
 
+socket.on('y', y => {
+    document.querySelector(".ghost").style.top = y-50+"px";
+})
+
+
 
 
 
@@ -79,8 +84,11 @@ document.querySelector("body").onclick= function(event) {
   }
 };
 
+
 // Add an eventlistener for key presses
 document.addEventListener('keydown', (e) => {
+  // console.log(document.querySelector(".bird").y);
+  socket.emit('y', document.querySelector(".bird").y);
 
   // Start the game if space key is pressed
   if (e.key == ' ' &&
@@ -90,6 +98,7 @@ document.addEventListener('keydown', (e) => {
         socket.emit('username', username);
         socket.emit('tube-score', score);
         socket.emit('username', username);
+
     document.querySelectorAll('.pipe_sprite')
               .forEach((e) => {
       e.remove();
@@ -175,7 +184,6 @@ function play() {
     });
     document.onclick= function(event) {
       if (game_state == 'Play'){
-        console.log("test");
         bird_dy = -7.6;
       }
     }

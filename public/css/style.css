@@ -37,7 +37,7 @@ h1 {
     left: 10vw;
     z-index: 100;
     opacity: 0.5;
-    animation: ghost 2000ms infinite 500ms;
+    /* animation: ghost 2000ms infinite 500ms; */
 }
 
 

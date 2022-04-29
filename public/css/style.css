@@ -28,20 +28,40 @@ h1 {
     left: 30vw;
     z-index: 100;
 }
-  
-  
-@keyframes move {
+
+.ghost {
+    height: initial;
+    width: 10vh;
+    position: fixed;
+    top: 40vh;
+    left: 10vw;
+    z-index: 100;
+    opacity: 0.5;
+    animation: ghost 2000ms infinite 500ms;
+}
+
+
+
+@keyframes ghost {
     0% {
-        margin-top: 0px;
+        top: 40vh;
+    }
+    25% {
+        top: 50vh;
     }
   
     50% {
-        margin-top: 100px;
+        top: 60vh;
     }
-    510% {
-        margin-top: 0px;
+
+    75% {
+        top: 50vh;
+    }
+    100% {
+        top: 40vh;
     }
   }
+
 
 .pipe_sprite {
     position: fixed;
@@ -51,13 +71,49 @@ h1 {
     width: 50px;
     background-color: green;
     margin-top: 0px;
+    margin-right: 0px;
 }
+
 
 .move .pipe_sprite {
     animation: move 2000ms infinite 500ms;
     background-color: red;
 }
 
+@keyframes move {
+    0% {
+        margin-top: 0px;
+    }
+  
+    50% {
+        margin-top: 100px;
+    }
+    100% {
+        margin-top: 0px;
+    }
+  }
+
+.move2 .pipe_sprite {
+    background-color: orange;
+}
+
+@keyframes move2 {
+    0% {
+        margin-right: 0px;
+    }
+  
+    50% {
+        margin-right: -100px;
+    }
+    100% {
+        margin-right: 0px;
+    }
+  }
+
+  .move3 .pipe_sprite {
+    animation: move 2000ms infinite 500ms;
+    background-color: black;
+}
 
 .message {
     position: fixed;

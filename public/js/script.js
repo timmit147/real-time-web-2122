@@ -220,13 +220,33 @@ function play() {
       pipe_sprite.style.top = pipe_posi + pipe_gap + 'vh';
       pipe_sprite.style.left = '150vw';
       pipe_sprite.increase_score = '1';
-      if(level > 15){
-        console.log("level2");
-        document.body.classList.add('move');
+      switch (level){
+        case 0:
+          document.body.classList.remove('move');
+          document.body.classList.remove('move2');
+          document.body.classList.remove('move3');
+          move_speed = 3;
+          break;
+        case 15:
+          document.body.classList.add('move');
+          break;
+        case 30:
+          document.body.classList.remove('move');
+          document.body.classList.add('move2');
+          move_speed = 6;
+          break;
+        case 40:
+          document.body.classList.remove('move2');
+          document.body.classList.add('move3');
+          break;
+        case 50:
+          move_speed = 8;
+          break;
+        case 60:
+          move_speed = 10;
+          break;
       }
-      else{
-        document.body.classList.remove('move');
-      }
+
         
       // Append the created pipe element in DOM
       document.body.appendChild(pipe_sprite);

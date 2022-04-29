@@ -22,6 +22,7 @@ async function fetchJson(url) {
     .catch((error) => error)
 }
 
+
 // google maps 52.36252905998706, 4.9114791923019805
 
 app.get('/', (req, res) => {

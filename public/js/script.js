@@ -1,6 +1,5 @@
 username = prompt("username");
 
-
 // Socket 
 
 let socket = io()
@@ -22,30 +21,14 @@ socket.on('tube-score', message => {
     ul.appendChild(li);
   }
   }
-
-
 })
-
 
 socket.on('y', y => {
     document.querySelector(".ghost").style.top = y-50+"px";
     console.log(username);
-
 })
 
-
-
-
-
-
-
-
-
-
-
 // changed code
-
-
 // Background scrolling speed
 let move_speed = 3;
     
@@ -257,8 +240,7 @@ function play() {
           move_speed = 10;
           break;
       }
-
-        
+      
       // Append the created pipe element in DOM
       document.body.appendChild(pipe_sprite);
       level = level+1;
@@ -268,8 +250,3 @@ function play() {
   }
   requestAnimationFrame(create_pipe);
 }
-
-
-
-
-

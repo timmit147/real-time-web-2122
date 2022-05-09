@@ -76,6 +76,15 @@ Ik stuur met socket.io de y coordinaten van de speler wanneer op spatie geklikt 
 
 ![image](https://user-images.githubusercontent.com/29665951/167418829-cae3c4b8-6fbf-49d5-b678-8e355e5b33d4.png)
 
+## memory
+De informatie van de gebruikers wordt opgeslagen in een object. Hier onder een voorbeeld hoe de data wordt opgeslagen. IK heb nu een object in een object maar in het vervolg zal ik beter een array maken met daar in een object omdat je een array beter kan manipuleren. Deze data wordt niet opgeslagen met een database waardoor na het resarten van de server alle data gereset word.
+
+```
+users{
+  uzddJjm_3W2e8aewAAAB: { score: 0, username: '0', hyscore: 0, y: 0 },
+  JTR0ODytMgPOytLJAAAD: { score: 0, username: '0', hyscore: 0, y: 0 }
+ }
+```
 
 ## Data-management
 Hier onder een voorbeeld hoe ik data ophaal en verstuur met de client server en api.

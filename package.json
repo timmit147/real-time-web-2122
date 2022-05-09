@@ -1,4 +1,11 @@
+
 {
+    "name": "real-time-web-2122",
+    "version": "1.0.0",
+    "description": "server side app",
+    "main": "server.js",
+    "author": "Tim Meeuwsen",
+    "license": "ISC",
     "scripts": {
         "start": "node server.js",
         "test": "nodemon ./bin/www"

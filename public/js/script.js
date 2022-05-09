@@ -23,9 +23,27 @@ socket.on('tube-score', message => {
   }
 })
 
-socket.on('y', y => {
-    document.querySelector(".ghost").style.top = y-50+"px";
-    console.log(username);
+socket.on('usersY', usersY => {
+  setTimeout(function(){ 
+    var i = 0;
+    console.log(usersY);
+    for (const key in usersY) {
+      i++;
+      if(usersY[key].username == username){
+        continue;
+      }
+      if (document.querySelector(`#ghost${i}`)){
+          document.querySelector(`#ghost${i}`).style.top = usersY[key].y-50+"px";
+          continue;
+      }
+      const newDiv = document.createElement("img");
+      newDiv.classList.add(`ghost`);
+      newDiv.setAttribute(`id`, `ghost${i}`);
+      newDiv.src="images/flappy.png";
+      document.body.appendChild(newDiv);
+
+  }
+  }, 1000);
 })
 
 // changed code
@@ -74,7 +92,7 @@ document.querySelector("body").onclick= function(event) {
 // Add an eventlistener for key presses
 document.addEventListener('keydown', (e) => {
   // console.log(document.querySelector(".bird").y);
-  socket.emit('y', document.querySelector(".bird").y);
+  socket.emit('usersY', document.querySelector(".bird").y);
 
   // Start the game if space key is pressed
   if (e.key == ' ' &&
@@ -173,12 +191,6 @@ function play() {
         bird_dy = -7.6;
       }
     }
-
-    // document.body.on('click touchstart', function () {
-    //   console.log("test");
-    // }
-  
-
     
     bird.style.top = bird_props.top + bird_dy + 'px';
     bird_props = bird.getBoundingClientRect();

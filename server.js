@@ -52,19 +52,7 @@ http.listen(port, () => {
 
 
 
-var users = {
-};
-
-// function ranking(){
-//   let sortable = [];
-// for (var item in users) {
-//   console.log(users[item].score);
-//     sortable.push([item, users[item].score]);
-// }
-
-// sortable.sort(function(a, b) {
-//     return a[1].score - b[1].score;
-// });
+var users = {};
 
 // https://www.tutorialspoint.com/javascript-sort-object-of-objects
 const sortByPosition = obj => {
@@ -93,14 +81,19 @@ io.on('connection', (socket) => {
     users[socket.id].score = tubescore;
     io.emit('tube-score', users)
   })
+
+   
   socket.on('username', (username) => {
     users[socket.id].username = username;
     io.emit('username', username)
   })
   
-  socket.on('y', (y) => {
-    users[socket.id].y = y;
-    io.emit('y', y)
+  socket.on('usersY', (usersY) => {
+    console.log(users);
+    if (users[socket.id]){
+      users[socket.id].y = usersY;
+      io.emit('usersY', users)
+    }
   })
 
 

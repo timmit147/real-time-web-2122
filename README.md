@@ -70,6 +70,17 @@ Ik ga niet alle codes uitvoeren maar alleen de globale codes.
 
 https://openweathermap.org/weather-conditions
 
+## Ghost added
+Ik stuur met socket.io de y coordinaten van de speler wanneer op spatie geklikt wordt, De cordinaten worden naar alle spelers gestuurd en voor elke persoon wordt in een forloop een ghost gemaakt met de username er naast. 
+![image](https://user-images.githubusercontent.com/29665951/167418829-cae3c4b8-6fbf-49d5-b678-8e355e5b33d4.png)
+
+
+## Data-management
+
+![Web 1920 – 20](https://user-images.githubusercontent.com/29665951/167418488-31ac46fa-8e0f-4036-85bb-e330a08b1ed0.png)
+
+## Eind recultaat
+
 
 ## Bronnen
 https://www.geeksforgeeks.org/flappy-bird-game-in-javascript/

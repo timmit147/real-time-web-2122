@@ -70,12 +70,15 @@ const sortByPosition = obj => {
 
 
 io.on('connection', (socket) => {
-    // users = sortByPosition(users);
+    users = sortByPosition(users);
   // console.log('user: ' +socket.id+'connected' )
   users[socket.id] = {score:0,username:"0",hyscore:0,y:0};
 
   socket.on('tube-score', (tubescore) => {
-    if(users[socket.id].score > users[socket.id].hyscore){
+    if(!users[socket.id]){
+      return;
+    }
+    if(tubescore > users[socket.id].hyscore){
       users[socket.id].hyscore = tubescore;
     }
     users[socket.id].score = tubescore;

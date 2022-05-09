@@ -30,16 +30,20 @@ h1 {
 }
 
 .ghost {
-    height: initial;
-    width: 10vh;
     position: fixed;
     top: -40vh;
     left: 10vw;
     z-index: 100;
-    opacity: 0.5;
-    /* animation: ghost 2000ms infinite 500ms; */
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 
+.ghost img{
+    height: initial;
+    width: 10vh;
+    opacity: 0.5;
+}
 
 
 @keyframes ghost {

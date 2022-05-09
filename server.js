@@ -70,7 +70,7 @@ const sortByPosition = obj => {
 
 
 io.on('connection', (socket) => {
-    users = sortByPosition(users);
+    // users = sortByPosition(users);
   // console.log('user: ' +socket.id+'connected' )
   users[socket.id] = {score:0,username:"0",hyscore:0,y:0};
 
@@ -89,7 +89,6 @@ io.on('connection', (socket) => {
   })
   
   socket.on('usersY', (usersY) => {
-    console.log(users);
     if (users[socket.id]){
       users[socket.id].y = usersY;
       io.emit('usersY', users)
@@ -99,7 +98,7 @@ io.on('connection', (socket) => {
 
   socket.on('disconnect', () => {
     // console.log('user: ' +socket.id+'connected' );
-    // delete users[socket.id];
+    delete users[socket.id];
   })
 })
 

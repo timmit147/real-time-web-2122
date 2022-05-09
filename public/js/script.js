@@ -26,21 +26,31 @@ socket.on('tube-score', message => {
 socket.on('usersY', usersY => {
   setTimeout(function(){ 
     var i = 0;
-    console.log(usersY);
+
+
     for (const key in usersY) {
       i++;
       if(usersY[key].username == username){
         continue;
       }
-      if (document.querySelector(`#ghost${i}`)){
-          document.querySelector(`#ghost${i}`).style.top = usersY[key].y-50+"px";
-          continue;
+      if(usersY[key].username == null){
+        continue;
       }
-      const newDiv = document.createElement("img");
-      newDiv.classList.add(`ghost`);
-      newDiv.setAttribute(`id`, `ghost${i}`);
-      newDiv.src="images/flappy.png";
-      document.body.appendChild(newDiv);
+      if(usersY[key].username == '0'){
+        continue;
+      }
+      if (document.querySelector(`#${usersY[key].username}`)){
+        document.querySelector(`#${usersY[key].username}`).style.top = usersY[key].y-50+"px";
+        continue;
+      }
+        var p = document.createElement("p");
+        p.innerHTML = usersY[key].username;
+        document.body.appendChild(p);
+        const newDiv = document.createElement("img");
+        p.classList.add(`ghost`);
+        p.setAttribute(`id`, `${usersY[key].username}`);
+        newDiv.src="images/flappy.png";
+        p.appendChild(newDiv);
 
   }
   }, 1000);

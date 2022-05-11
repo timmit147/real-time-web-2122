@@ -60,12 +60,12 @@ Met de API kan je verschillenden informatie ophalen maar wat ik het intresantste
 ### Vormgeving weer
 In indesign heb ik een ontwerp gemaakt van de verschillenden weer typens. In html en css heb ik animaties toegevoed zoals regen en sneeuw om het meer interessant te maken.
 
-![Web 1920 – 16](https://user-images.githubusercontent.com/29665951/165083176-b82296b3-39e6-4ec4-aa90-3c1f5e3cc467.png)
-![Web 1920 – 18](https://user-images.githubusercontent.com/29665951/165083183-cb0dcaa6-759e-4ef0-adaa-adf2a3c4d988.png)
-![Web 1920 – 19](https://user-images.githubusercontent.com/29665951/165083184-f808d88e-94ae-4e3f-9cc7-647050a36552.png)
-![Web 1920 – 17](https://user-images.githubusercontent.com/29665951/165083186-2db204de-38ad-4fed-b7cb-d0b1ebaff786.png)
-![Web 1920 – 15](https://user-images.githubusercontent.com/29665951/165083189-c29a0394-8a2d-4837-b154-a2d5e9ab8d2a.png)
-![Web 1920 – 14](https://user-images.githubusercontent.com/29665951/165083190-582ae5db-8c39-4a97-8acf-f52ea4450781.png)
+<img src="https://user-images.githubusercontent.com/29665951/165083176-b82296b3-39e6-4ec4-aa90-3c1f5e3cc467.png"  width="250px">
+<img src="https://user-images.githubusercontent.com/29665951/165083183-cb0dcaa6-759e-4ef0-adaa-adf2a3c4d988.png"  width="250px">
+<img src="https://user-images.githubusercontent.com/29665951/165083184-f808d88e-94ae-4e3f-9cc7-647050a36552.png"  width="250px">
+<img src="https://user-images.githubusercontent.com/29665951/165083186-2db204de-38ad-4fed-b7cb-d0b1ebaff786.png"  width="250px">
+<img src="https://user-images.githubusercontent.com/29665951/165083189-c29a0394-8a2d-4837-b154-a2d5e9ab8d2a.png"  width="250px">
+<img src="https://user-images.githubusercontent.com/29665951/165083190-582ae5db-8c39-4a97-8acf-f52ea4450781.png"  width="250px">
 
 
 
@@ -74,7 +74,8 @@ https://openweathermap.org/weather-conditions
 ## Ghost added
 Ik stuur met socket.io de y coordinaten van de speler wanneer op spatie geklikt wordt, De cordinaten worden naar alle spelers gestuurd en voor elke persoon wordt in een forloop een ghost gemaakt met de username er naast. 
 
-![image](https://user-images.githubusercontent.com/29665951/167418829-cae3c4b8-6fbf-49d5-b678-8e355e5b33d4.png)
+<img src="https://user-images.githubusercontent.com/29665951/167418829-cae3c4b8-6fbf-49d5-b678-8e355e5b33d4.png"  width="250px">
+
 
 ## memory
 De informatie van de gebruikers wordt opgeslagen in een object. Hier onder een voorbeeld hoe de data wordt opgeslagen. IK heb nu een object in een object maar in het vervolg zal ik beter een array maken met daar in een object omdat je een array beter kan manipuleren. Deze data wordt niet opgeslagen met een database waardoor na het resarten van de server alle data gereset word.
@@ -89,7 +90,7 @@ users{
 ## Data-management
 Hier onder een voorbeeld hoe ik data ophaal en verstuur met de client server en api.
 
-![Web 1920 – 20](https://user-images.githubusercontent.com/29665951/167418488-31ac46fa-8e0f-4036-85bb-e330a08b1ed0.png)
+<img src="https://user-images.githubusercontent.com/29665951/167418488-31ac46fa-8e0f-4036-85bb-e330a08b1ed0.png"  width="250px">
 
 ## Eind recultaat
 

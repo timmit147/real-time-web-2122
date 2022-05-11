@@ -74,7 +74,7 @@ https://openweathermap.org/weather-conditions
 ## Ghost added
 Ik stuur met socket.io de y coordinaten van de speler wanneer op spatie geklikt wordt, De cordinaten worden naar alle spelers gestuurd en voor elke persoon wordt in een forloop een ghost gemaakt met de username er naast. 
 
-<img src="https://user-images.githubusercontent.com/29665951/167418829-cae3c4b8-6fbf-49d5-b678-8e355e5b33d4.png"  width="900px">
+<img src="https://user-images.githubusercontent.com/29665951/167418829-cae3c4b8-6fbf-49d5-b678-8e355e5b33d4.png"  width="250px">
 
 
 ## memory
@@ -90,7 +90,7 @@ users{
 ## Data-management
 Hier onder een voorbeeld hoe ik data ophaal en verstuur met de client server en api.
 
-<img src="https://user-images.githubusercontent.com/29665951/167418488-31ac46fa-8e0f-4036-85bb-e330a08b1ed0.png"  width="250px">
+<img src="https://user-images.githubusercontent.com/29665951/167418488-31ac46fa-8e0f-4036-85bb-e330a08b1ed0.png"  width="800px">
 
 ## Eind recultaat
 

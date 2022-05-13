@@ -1,6 +1,8 @@
 # Flappy bird multiplayer
 Voor het vak real time web heb ik een offline flappy bird game omgezet naar een multiplayer game met socket.io. De live data die je kan zien is een scorenboard met de top 20 spelers en verschillenden ghost  spelers die live de game spelen. De API die ik heb gebruikt in dit project is een weer API die de achtergrond van het level verandert naar het huidige weer.
 
+Live versie: https://flappy123.herokuapp.com/
+
 <img src="https://user-images.githubusercontent.com/29665951/168274843-857fb07c-8e49-4f4b-8f5c-3cd31b0aa937.png"  width="500px">
 
 ## Hoe heb ik de game aangepast?

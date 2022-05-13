@@ -17,7 +17,18 @@ Basis code: https://www.geeksforgeeks.org/flappy-bird-game-in-javascript/
 ![ezgif-4-9a27a61e98](https://user-images.githubusercontent.com/29665951/168278241-1c4d79e1-de00-4194-b2e7-c480ea560e68.gif)
 
 
-## Hoe heb ik de socket toegevoegd?
+## Hoe heb ik de socket scorenboard toegevoegd?
+
+Wanneer een gebruiker zijn username invuld krijgt de gebruiker een uniek socket id van de server. Wanneer de gebruiker door de buis heen gaat stuurt de client de nieuwe score met het socket id naar de server in een object. De server zet het object op volgorden van hoogste score naar laagste scoren en stuurt het object naar alle andere clients. Elke client loopt de code in een lijst zodat de gebruiker het kan zien. De ster toont de hyscore die je hebt gehaald.
+
+![image](https://user-images.githubusercontent.com/29665951/168285198-b0b6a44f-30c6-4328-a61b-b6a3bb2248ed.png)
+
+
+## Hoe heb ik de ghost toegevoegd?
+Elke keer dat de gebruiker klikt op spatie stuurt de client de y waarden van de gebruiker met het socket id naar de server. De server plaatst de huidige y waarden naar in een object en dit object word gestuurd naar de clients. De client loopt door het object en maakt per gebruiker een ghost aan + een p met de naam van de gebruiker. Wanneer de gebruiker al is aangemaakt doet die dit niet opnieuw maar past die alleen de y waarden aan van de ghost. Wanneer een gebruiker uitlogt word de ghost verwijdert uit het object en is het niet meer zichtbaar bij de clients.
+
+<img src="https://user-images.githubusercontent.com/29665951/168285383-ce15da6e-8dd8-48a7-817a-7f260b1327e7.png"  width="500px">
+
 
 
 

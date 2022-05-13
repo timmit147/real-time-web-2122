@@ -6,6 +6,8 @@ Voor het vak real time web heb ik een offline flappy bird game omgezet naar een 
 ## Hoe heb ik de game aangepast?
 Ik heb gebruik gemaakt van een bestaande game en deze aangepast naar mijn eigen game. De styling die ik heb aangepast is het letertypen de vogel en de achtergrond van het level. De javascript die ik heb aangepast is extra levels toegevoegd dat wanneer je level 15 heb gehaald de buizen gaan bewegen en bij level 30 de vogel sneler gaat bewegen.
 
+Basis code: https://www.geeksforgeeks.org/flappy-bird-game-in-javascript/
+
 **Voor** 
 
 ![ezgifcomgifmaker3](https://user-images.githubusercontent.com/29665951/168276159-7419137c-a290-4a62-8536-31265012cb6e.gif)
@@ -15,7 +17,7 @@ Ik heb gebruik gemaakt van een bestaande game en deze aangepast naar mijn eigen 
 ![ezgif-4-9a27a61e98](https://user-images.githubusercontent.com/29665951/168278241-1c4d79e1-de00-4194-b2e7-c480ea560e68.gif)
 
 
-Basis code: https://www.geeksforgeeks.org/flappy-bird-game-in-javascript/
+## Hoe heb ik de socket toegevoegd?
 
 
 

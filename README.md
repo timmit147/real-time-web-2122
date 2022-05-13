@@ -1,5 +1,32 @@
-# Flappy bird
-Voor dit project heb ik een offline flappy bird onlline gemaakt met socket.io. De data dat je live kan zien is het scorenboard en de andere gebruikers.
+# Flappy bird multiplayer
+Voor het vak real time web heb ik een offline flappy bird game omgezet naar een multiplayer game met socket.io. De live data die je kan zien is een scorenboard met de top 20 spelers en verschillenden ghost  spelers die live de game spelen. De API die ik heb gebruikt in dit project is een weer API die de achtergrond van het level verandert naar het huidige weer.
+
+<img src="https://user-images.githubusercontent.com/29665951/168274843-857fb07c-8e49-4f4b-8f5c-3cd31b0aa937.png"  width="500px">
+
+## Hoe heb ik de game aangepast?
+Ik heb gebruik gemaakt van een bestaande game en deze aangepast naar mijn eigen game. De styling die ik heb aangepast is het letertypen de vogel en de achtergrond van het level. De javascript die ik heb aangepast is extra levels toegevoegd dat wanneer je level 15 heb gehaald de buizen gaan bewegen en bij level 30 de vogel sneler gaat bewegen.
+
+**Voor** 
+
+![ezgifcomgifmaker3](https://user-images.githubusercontent.com/29665951/168276159-7419137c-a290-4a62-8536-31265012cb6e.gif)
+
+**Na**
+
+![ezgif-4-9a27a61e98](https://user-images.githubusercontent.com/29665951/168278241-1c4d79e1-de00-4194-b2e7-c480ea560e68.gif)
+
+
+Basis code: https://www.geeksforgeeks.org/flappy-bird-game-in-javascript/
+
+
+
+
+
+
+
+
+
+
+
 
 ## Wat ga ik doen
 1. Basis is live een scorenboard

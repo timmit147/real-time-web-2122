@@ -153,16 +153,19 @@ users{
  }
 ```
 
+
 ## Data-management
 Hier onder een voorbeeld hoe ik data ophaal en verstuur met de client server en api.
 
-<img src="https://user-images.githubusercontent.com/29665951/167418488-31ac46fa-8e0f-4036-85bb-e330a08b1ed0.png"  width="800px">
+<img src="https://user-images.githubusercontent.com/29665951/168294343-1c7055d8-6ee3-4bfc-8b07-053cf3f924fd.png"  width="800px">
 
 ## Eind recultaat
 
+<img src="https://user-images.githubusercontent.com/29665951/168274843-857fb07c-8e49-4f4b-8f5c-3cd31b0aa937.png"  width="500px">
+
 ## Wat is nog niet gelukt
 Het aanpassen van de vogel van kleur of soort had ik niet genoeg tijd voor.
+Ghost is nu niet smooth ik zou nog een animatie toevoegen.
 
 
-## Bronnen
-https://www.geeksforgeeks.org/flappy-bird-game-in-javascript/
+

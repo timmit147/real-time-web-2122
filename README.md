@@ -161,7 +161,7 @@ Hier onder een voorbeeld hoe ik data ophaal en verstuur met de client server en 
 
 ## Eind recultaat
 
-<img src="https://user-images.githubusercontent.com/29665951/168274843-857fb07c-8e49-4f4b-8f5c-3cd31b0aa937.png"  width="500px">
+<img src="https://user-images.githubusercontent.com/29665951/168278241-1c4d79e1-de00-4194-b2e7-c480ea560e68.gif"  width="500px">
 
 ## Wat is nog niet gelukt
 Het aanpassen van de vogel van kleur of soort had ik niet genoeg tijd voor.

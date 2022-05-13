@@ -124,7 +124,7 @@ In indesign heb ik een ontwerp gemaakt van de verschillenden weer typens. In htm
 
 **Sneeuw**
 
-<img src="https://user-images.githubusercontent.com/29665951/165083186-2db204de-38ad-4fed-b7cb-d0b1ebaff786.png"  width="250px">
+<img src="https://user-images.githubusercontent.com/29665951/168289903-9b033c5b-eab3-420c-97a3-957f6c52832b.gif"  width="250px">
 
 **Mist**
 

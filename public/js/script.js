@@ -25,11 +25,9 @@ socket.on('tube-score', message => {
 
 socket.on('usersY', usersY => {
   setTimeout(function(){ 
-    var i = 0;
-
-
     for (const key in usersY) {
-      i++;
+      console.log(key);
+
       if(usersY[key].username == username){
         continue;
       }

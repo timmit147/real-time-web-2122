@@ -87,6 +87,9 @@ io.on('connection', (socket) => {
 
    
   socket.on('username', (username) => {
+    if(!users[socket.id]){
+      return;
+    }
     users[socket.id].username = username;
     io.emit('username', username)
   })

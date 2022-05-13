@@ -116,11 +116,11 @@ In indesign heb ik een ontwerp gemaakt van de verschillenden weer typens. In htm
 
 **Storm**
 
-<img src="https://user-images.githubusercontent.com/29665951/165083183-cb0dcaa6-759e-4ef0-adaa-adf2a3c4d988.png"  width="250px">
+<img src="https://user-images.githubusercontent.com/29665951/168290422-71d56884-5bcc-4c76-b342-e29c332900ac.gif"  width="250px">
 
 **Regen**
 
-<img src="https://user-images.githubusercontent.com/29665951/165083184-f808d88e-94ae-4e3f-9cc7-647050a36552.png"  width="250px">
+<img src="https://user-images.githubusercontent.com/29665951/168290240-4c9a57d8-a19d-4d23-8265-7360eefdbfd7.gif"  width="250px">
 
 **Sneeuw**
 
